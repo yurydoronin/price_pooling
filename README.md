@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/yurydoronin/price_pooling.svg?branch=master)](https://travis-ci.org/yurydoronin/price_pooling)	
 [![codecov](https://codecov.io/gh/yurydoronin/price_pooling/branch/master/graph/badge.svg)](https://codecov.io/gh/yurydoronin/price_pooling)	
 	
-**Тестовое задание компании CSI**
+# Тестовое задание компании CSI
 
 Используя язык Java, необходимо написать метод объединения имеющихся цен с вновь импортированными из внешней системы. Также необходимо написать unit-тесты для проверки хотя бы некоторых возможных вариантов.
 	
