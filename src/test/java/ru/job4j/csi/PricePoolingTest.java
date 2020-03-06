@@ -1,4 +1,4 @@
-package ru.job4j.test;
+package ru.job4j.csi;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package ru.job4j.test;
+package ru.job4j.csi;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
