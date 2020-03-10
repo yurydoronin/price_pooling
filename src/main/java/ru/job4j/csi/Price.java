@@ -122,12 +122,17 @@ public class Price {
             return false;
         }
         Price price = (Price) o;
-        return depart == price.depart
-                && Objects.equals(productCode, price.productCode);
+        return id == price.id &&
+                number == price.number &&
+                depart == price.depart &&
+                value == price.value &&
+                productCode.equals(price.productCode) &&
+                begin.equals(price.begin) &&
+                endTime.equals(price.endTime);
     }
 
     @Override
     public int hashCode() {
-        return ((productCode != null ? productCode.hashCode() : 0) << 5) - Integer.hashCode(this.depart);
+        return Objects.hash(id, productCode, number, depart, begin, endTime, value);
     }
 }

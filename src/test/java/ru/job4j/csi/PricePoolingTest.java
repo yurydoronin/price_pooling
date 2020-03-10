@@ -7,8 +7,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Test.
@@ -84,26 +83,9 @@ public class PricePoolingTest {
                         LocalDate.parse("31-01-2013", formatter), 5));
     }
 
-    private boolean compare(List<Price> united, List<Price> result) {
-        boolean rst = true;
-        if (united.size() != result.size()) {
-            rst = false;
-        }
-        for (int index = 0; index < united.size(); index++) {
-            if (united.get(index) == result.get(index) && united.get(index).getId() != result.get(index).getId()) {
-                rst = false;
-                break;
-            }
-        }
-        return rst;
-    }
-
     @Test
     public void whenTwoCollectionsThenUniteIntoOne() {
         List<Price> result = new PricePooling().unite(currentPrice, newPrice);
-        assertThat(this.compare(united, result), is(true));
-        united.forEach(System.out::print);
-        System.out.println("");
-        result.forEach(System.out::print);
+        assertEquals(united, result);
     }
 }
